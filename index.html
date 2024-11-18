@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air University</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Air University</a>
+    
+    <!-- Toggle button for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <!-- Information Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Information for:
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#students">Students</a></li>
+                    <li><a class="dropdown-item" href="#faculty">Faculty and Staff</a></li>
+                    <li><a class="dropdown-item" href="#families">Families</a></li>
+                    <li><a class="dropdown-item" href="#visitors">Visitors</a></li>
+                    <li><a class="dropdown-item" href="#alumni">Alumni</a></li>
+                </ul>
+            </li>
+
+            <!-- Standard Navbar Links -->
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#news">News & Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#admission">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Search Button -->
+        <div class="btn-group">
+            <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Search
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- About Section -->
+<section id="about" class="py-0 mt-0">
+    <div class="full-screen-image position-relative">
+        <img src="https://portals.au.edu.pk/ICO/Content/images/banner.jpg" alt="About Air University" class="img-fluid">
+        <div class="overlay-text">
+            <h1 class="text-center">Air University</h1>
+            <p class="text-center">Air University is committed to providing high-quality education and research opportunities in a wide range of fields.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Ensure no margin or padding for navbar */
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Fix navbar at top of the page */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    /* Space out the About Section content to avoid overlap */
+    #about {
+        margin-top: 70px; /* Adjust based on the height of your navbar */
+    }
+
+    /* Ensure the image in the About section is fully stretched */
+    .full-screen-image {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .full-screen-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Add text styles for the overlay */
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .overlay-text h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .overlay-text p {
+        font-size: 1.25rem;
+    }
+</style>
+
+<!-- Parallax Effect Section -->
+<section class="parallax-section">
+    <div class="parallax-content text-center">
+        <h2>Discover Our Mission</h2>
+        <p>Our mission is to contribute to the world by educating students for lives of leadership and contribution with integrity; advancing fundamental knowledge and cultivating creativity; leading in pioneering research for effective clinical therapies; and accelerating solutions and amplifying their impact.</p>
+        <button class="btn btn-danger mt-3" onclick="scrollToTop()">More about Air</button>
+    </div>
+</section>
+
+<style>
+    /* Global Styles for Body and Container */
+    body, .container, .navbar, .hero-section {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Full-Screen Image Section */
+    .full-screen-image {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .full-screen-image img {
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        object-fit: cover; /* Ensure the image covers the entire area without stretching */
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Slightly more opaque background */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    }
+
+    .overlay-text h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .overlay-text p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Parallax Effect Section */
+    .parallax-section {
+        position: relative;
+        height: 600px; /* Increased height for more impact */
+        background-image: url('https://portals.au.edu.pk/ICO/Content/images/banner.jpg');
+        background-attachment: fixed; /* The key to the parallax effect */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 40px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: background-position 0.5s ease-out; /* Smooth background transition */
+    }
+
+    /* Optional for a more realistic effect: Adding an overlay to darken the background */
+    .parallax-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for better text contrast */
+        z-index: 1;
+    }
+
+    .parallax-content {
+        position: relative;
+        z-index: 2; /* Ensures text is above the overlay */
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    }
+
+    .parallax-content h2 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .parallax-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-danger {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    /* Optional: Add more depth with the parallax scrolling effect */
+    .parallax-section {
+        transition: background-position 0.1s linear;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .overlay-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .overlay-text p {
+            font-size: 1rem;
+        }
+
+        .parallax-section {
+            height: 500px; /* Reduced height for mobile */
+        }
+
+        .parallax-content {
+            padding: 20px;
+        }
+    }
+</style>
+
+<script>
+    // Function to scroll back to the top of the page
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+    <!-- Campus News Section -->
+    <section id="campus-news" class="text-center my-5">
+        <h2>Campus News</h2>
+        <p>Stories about people, research, and innovation across the Farm</p>
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card news-card">
+                        <img src="images/5a9b6a38-f76d-4825-8cf8-461f8dbbd3bb.jpg" class="card-img-top" alt="Health">
+                        <div class="card-body">
+                            <h5 class="card-title">Health</h5>
+                            <p class="card-text">Air university launches center focused on human and planetary health</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card news-card">
+                        <img src="images/class.jpg" class="card-img-top" alt="Business">
+                        <div class="card-body">
+                            <h5 class="card-title">Business</h5>
+                            <p class="card-text">Mapping the maze where the US could find billions in unpaid taxes</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card news-card">
+                        <img src="images/law.jpg" class="card-img-top" alt="Law">
+                        <div class="card-body">
+                            <h5 class="card-title">Law</h5>
+                            <p class="card-text">Nate Persily’s mini museum of election history</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-danger mt-3">More campus news</button>
+    </section>
+    
+    <!-- Academics Section -->
+    <section id="academics" class="text-center my-5">
+        <h2>Academics</h2>
+        <p>At Air University, students pursue academic excellence across a wide range of disciplines, with access to groundbreaking research, global collaboration, and experiential learning.</p>
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card academic-card">
+                        <img src="images/11111.jpg" class="card-img-top" alt="Humanities">
+                        <div class="card-body">
+                            <h5 class="card-title">Humanities</h5>
+                            <p class="card-text">Exploring the human experience through literature, history, and philosophy.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card academic-card">
+                        <img src="images/class.jpg" class="card-img-top" alt="Sciences">
+                        <div class="card-body">
+                            <h5 class="card-title">Sciences</h5>
+                            <p class="card-text">Advancing knowledge in fields like biology, chemistry, and physics.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card academic-card">
+                        <img src="images/Ai.jpeg" class="card-img-top" alt="Engineering">
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering</h5>
+                            <p class="card-text">Innovating solutions to address societal and environmental challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mt-3">Schools in which you can pursue your passions:</p>
+        <p>Medicine | Law | Humanities and Sciences | Engineering | Education | Computer Science | Business</p>
+        <button class="btn btn-danger mt-3">More about Academics</button>
+    </section>
+    
+    <style>
+        /* Global Styles */
+        body, .container {
+            font-family: 'Arial', sans-serif;
+        }
+    
+        .text-center {
+            text-align: center;
+        }
+    
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        /* Hover effect for cards */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        .card-body {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+    
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    
+        .btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn:hover {
+            background-color: #c82333;
+        }
+    
+        /* Section Padding and Spacing */
+        .my-5 {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+    
+        /* Campus News Section */
+        #campus-news h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    
+        #campus-news p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #666;
+        }
+    
+        /* Academics Section */
+        #academics h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    
+        #academics p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .col-md-4 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    
+            .btn {
+                width: 100%;
+                font-size: 1.2rem;
+            }
+        }
+    
+        /* Section Background and Text Styling */
+        .profile-section {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            background-image: url('images/5a9b6a38-f76d-4825-8cf8-461f8dbbd3bb.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .profile-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    
+        .profile-description {
+            margin: 0;
+        }
+    </style>
+
+    <!-- Image Section with Parallax Effect -->
+    <section class="profile-section">
+        <div class="profile-overlay">
+            <h2>Welcome to Air University</h2>
+            <p class="profile-description">Here, we foster academic excellence, research innovation, and societal impact.</p>
+        </div>
+    </section>
+    <!-- Research Section ...>
+<section class="research-section">
+    <div class="container text-center">
+        <h2 class="section-title">Research at Air University</h2>
+        <p class="section-description">Air University is dedicated to advancing knowledge and solving real-world problems. Our research spans numerous disciplines and includes contributions from leading experts across fields.</p>
+
+        <!-- Stats Line -->
+        <style>
+            /* Research Section Styles */
+            .research-section {
+                padding: 50px 0;
+                background-color: #f0f8ff;  /* Light blue background */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .section-title {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .section-description {
+                font-size: 1.1rem;
+                color: #666;
+                max-width: 700px;
+                margin: 0 auto 30px;
+            }
+    
+            /* Stats Line */
+            .stats-line {
+                margin: 30px 0;
+                background: #ffffff; /* White background for stats line */
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .stats-line hr {
+                border-top: 2px solid #ccc;
+                margin: 0;
+            }
+    
+            .stats {
+                display: flex;
+                justify-content: space-around;
+                margin: 20px 0;
+                font-size: 1.2rem;
+                color: #333;
+            }
+    
+            .stats div {
+                text-align: center;
+            }
+    
+            .stats div small {
+                display: block;
+                color: #666;
+                font-size: 0.9rem;
+                margin-top: 5px;
+            }
+    
+            /* Button */
+            .btn-primary {
+                background-color: #8c1515;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+    
+            .btn-primary:hover {
+                background-color: #a42f2f; /* Darker shade on hover */
+            }
+    
+            /* Upcoming Events Section Styles */
+            .events-section {
+                padding: 50px 0;
+                background: linear-gradient(145deg, #ff8a00, #e52e71);  /* Gradient background */
+                color: white;
+            }
+    
+            .events-section .section-title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+    
+            .events-section .section-description {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto 30px;
+                color: #fff;
+            }
+    
+            .event-card {
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .event-card img {
+                width: 100%;
+                height: auto;
+            }
+    
+            .event-card .card-body {
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+                text-align: center;
+            }
+    
+            .event-card .card-body h5 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+    
+            .event-card .card-body p {
+                font-size: 1rem;
+                color: #fff;
+            }
+    
+            .event-card:hover {
+                transform: scale(1.05);
+                transition: all 0.3s ease-in-out;
+            }
+    
+            /* Button for Upcoming Events */
+            .events-section .btn-primary {
+                background-color: #f8b400;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #333;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .events-section .btn-primary:hover {
+                background-color: #f79c42; /* Lighten on hover */
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <!-- Research Section -->
+        <section class="research-section">
+            <div class="container text-center">
+                <h2 class="section-title">Research at Air University</h2>
+                <p class="section-description">Air University is dedicated to advancing knowledge and solving real-world problems. Our research spans numerous disciplines and includes contributions from leading experts across fields.</p>
+    
+                <!-- Stats Line -->
+                <div class="stats-line">
+                    <hr>
+                    <div class="stats">
+                        <div><strong>15 Institutions</strong><br><small>Focused on innovative research and academic excellence.</small></div>
+                        <div><strong>20 Libraries</strong><br><small>Extensive resources supporting scholarship and research.</small></div>
+                        <div><strong>$1.98 B</strong><br><small>Annual budget allocated to research initiatives and projects.</small></div>
+                    </div>
+                    <hr>
+                </div>
+    
+                <!-- Button -->
+                <button class="btn-primary">More about Research</button>
+            </div>
+        </section>
+    
+        <!-- Upcoming Events Section -->
+        <section class="events-section">
+            <div class="container text-center">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-description">Join us for upcoming events featuring thought leaders, cutting-edge research, and engaging discussions.</p>
+    
+                <!-- Events Cards -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card event-card">
+                            <img src="images/class.jpg" class="card-img-top" alt="Event 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Event 1</h5>
+                                <p class="card-text">Join us for a fascinating discussion on emerging trends in technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card event-card">
+                            <img src="images/5a9b6a38-f76d-4825-8cf8-461f8dbbd3bb.jpg" class="card-img-top" alt="Event 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Event 2</h5>
+                                <p class="card-text">Explore new research in health sciences at this interactive seminar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card event-card">
+                            <img src="images/health.jpg" class="card-img-top" alt="Event 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Event 3</h5>
+                                <p class="card-text">A workshop on the latest advancements in sustainable energy solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card event-card">
+                            <img src="images/Ai.jpeg" class="card-img-top" alt="Event 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Event 4</h5>
+                                <p class="card-text">Join our expert panel discussing innovation in education.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Button -->
+                <button class="btn-primary mt-4">More events</button>
+            </div>
+        </section>
+
+  <!-- Healthcare Section -->
+<section class="healthcare-section">
+    <div class="container text-center">
+        <h2 class="section-title">Health Care</h2>
+        <p class="section-description">Air university Health Care combines academic excellence with compassion to deliver cutting-edge healthcare and innovative medical research.</p>
+
+        <!-- Health Care Cards -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card healthcare-card">
+                    <img src="images/5a9b6a38-f76d-4825-8cf8-461f8dbbd3bb.jpg" class="card-img-top" alt="Healthcare 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare Initiative 1</h5>
+                        <p class="card-text">Exploring advancements in cancer research for improved patient outcomes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card healthcare-card">
+                    <img src="images/Ai.jpeg" class="card-img-top" alt="Healthcare 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare Initiative 2</h5>
+                        <p class="card-text">Innovative treatments for neurological disorders, improving lives globally.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card healthcare-card">
+                    <img src="images/11111.jpg" class="card-img-top" alt="Healthcare 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare Initiative 3</h5>
+                        <p class="card-text">Pioneering research in cardiovascular health for early intervention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <button class="btn btn-primary mt-4">More about Health Care</button>
+    </div>
+</section>
+
+<!-- Admission Section with Parallax Effect -->
+<section class="admission-section">
+    <div class="admission-content">
+        <h2 class="admission-title">Admission</h2>
+        <p class="admission-description">Offering extraordinary freedom to explore, to collaborate, and to challenge yourself</p>
+        
+        <div class="admission-image-container">
+            <img src="images/admission.jpg" alt="Students walking at university" class="admission-image">
+        </div>
+        
+        <div class="admission-details">
+            <div class="admission-text">
+                <h3>Explore the possibilities of a Stanford education as you map out your college journey.</h3>
+                <p>Find comprehensive information about application deadlines, academic programs, financial aid, and campus life.</p>
+            </div>
+            <div class="admission-text">
+                <h3>Air university meets the full financial need of every admitted undergrad who qualifies for assistance.</h3>
+                <p>We are committed to ensuring affordability for all students through various scholarships, grants, and financial plans.</p>
+            </div>
+        </div>
+
+        <button class="admission-button">More about Admission</button>
+    </div>
+</section>
+
+<style>
+    /* Healthcare Section (no changes here) */
+    .healthcare-section {
+        padding: 5rem 0;
+        background-color: #f8f9fa;
+    }
+
+    .healthcare-section .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .healthcare-section .section-description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .healthcare-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .healthcare-card .card-body {
+        padding: 1.5rem;
+    }
+
+    /* Admission Section */
+    .admission-section {
+        position: relative; /* Necessary for positioning background image */
+        background-image: url('images/admission-parallax.jpg'); /* Add your background image here */
+        background-attachment: fixed; /* Parallax effect */
+        background-position: center; /* Center the background image */
+        background-size: cover; /* Cover the entire section */
+        color: white; /* White text for visibility on dark backgrounds */
+        padding: 5rem 0;
+    }
+
+    .admission-content {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .admission-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .admission-description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .admission-image-container {
+        margin-bottom: 2rem;
+    }
+
+    .admission-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .admission-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .admission-text {
+        flex: 1;
+        margin: 0 1rem;
+    }
+
+    .admission-button {
+        padding: 12px 20px;
+        background-color: #dc3545;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .admission-button:hover {
+        background-color: #c82333;
+    }
+</style>
+
+
+<!-- Footer Section -->
+
+    <style>
+        /* Footer Section Styles */
+        .footer {
+            background-color: #333; /* Dark background for the footer */
+            color: white; /* White text for readability */
+            padding: 3rem 0;
+            text-align: center; /* Center all the content */
+        }
+
+        .footer h5, .footer h6 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-buttons button {
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-buttons button:hover {
+            background-color: #c82333;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #dc3545; /* Change color on hover */
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 5px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Content */
+        .footer-main-links, .footer-secondary-links, .footer-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-main-links div, .footer-secondary-links div {
+            width: 200px;
+            text-align: center;
+        }
+
+        .footer-buttons button {
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Main Footer Links -->
+        <div class="footer-main-links">
+            <div>
+                <h5>SCHOOLS</h5>
+                <p>Business<br>Education<br>Engineering<br>Humanities & Sciences<br>Law<br>Medicine<br>Sustainability</p>
+            </div>
+            <div>
+                <h5>ACADEMICS</h5>
+                <p>Undergraduate Majors</p>
+            </div>
+            <div>
+                <h5>HEALTH CARE</h5>
+                <p>AIR Health Care<br>AIR Children's Health</p>
+            </div>
+            <div>
+                <h5>ABOUT STANFORD</h5>
+                <p>Facts<br>History<br>Accreditation</p>
+            </div>
+            <div>
+                <h5>RESOURCES</h5>
+                <p>Campus Map<br>Community Engagement<br>Directory<br>Stanford Profiles</p>
+            </div>
+        </div>
+
+        <!-- Secondary Footer Links -->
+        <div class="footer-secondary-links">
+            <div>
+                <h6>RESEARCH</h6>
+                <p>Research Centers<br>Libraries</p>
+            </div>
+            <div>
+                <h6>ONLINE LEARNING</h6>
+                <p>AIR Online</p>
+            </div>
+            <div>
+                <h6>ADMISSION</h6>
+                <p>UG<br>Graduate<br>Financial Aid</p>
+            </div>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="footer-buttons">
+            <button>Applying</button>
+            <button>Visiting</button>
+            <button>Giving</button>
+            <button>Careers</button>
+            <button>Faculty Positions</button>
+            <button>Contact</button>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-apple"></i></a>
+        </div>
+
+        <!-- Footer Text -->
+        <p class="footer-text">
+            &copy; Air University. Pakistan, Islamabad 94305.
+        </p>
+
+        <!-- Footer Links -->
+        <p class="footer-links">
+            <a href="#">Stanford Home</a> | 
+            <a href="#">Maps & Directions</a> | 
+            <a href="#">Search Stanford</a> | 
+            <a href="#">Emergency Info</a> | 
+            <a href="#">Terms of Use</a> | 
+            <a href="#">Privacy</a> | 
+            <a href="#">Accessibility</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Scroll JavaScript -->
+<script>
+    function scrollToMission() {
+        document.getElementById("mission").scrollIntoView({ behavior: "smooth" });
+    }
+    
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
